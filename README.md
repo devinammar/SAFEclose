@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/devinammar/SAFEclose/blob/41e77d1c5574679cea6375345985b9aabf9655ff/Banner.png?raw=true" alt="Problems" width="600">
+  <img src="https://github.com/devinammar/SAFEclose/blob/41e77d1c5574679cea6375345985b9aabf9655ff/Banner.png?raw=true" alt="Problems" width="800">
 </p>
 
 <div align="center">
@@ -17,7 +17,7 @@ SAFEclose is a lightweight Windows utility that keeps your laptop running even w
 
 ## 🎯 Problems
 <p align="center">
-  <img src="https://github.com/devinammar/Safeclose/blob/0a286c10e06eac3c42db1d17c9f1040297f625e2/Safeclose.jpg?raw=true" alt="Problems" width="600">
+  <img src="https://github.com/devinammar/Safeclose/blob/0a286c10e06eac3c42db1d17c9f1040297f625e2/Safeclose.jpg?raw=true" alt="Problems" width="400">
 </p>
 
 As AI agents become a common part of everyday workflows, many people now carry their laptops everywhere to cafes, airports, and public spaces while keeping them open just to keep their AI agents running. Closing the lid or screen risks interrupting an active task, so users are left with no choice but to leave their screens exposed. Safeclose solves this by automatically detecting when an AI agent is running and preventing the laptop from sleeping when the lid is closed, so users can safely shut their lid without stopping their work
