@@ -1,6 +1,6 @@
-# SAFEclose
-
-SAFEclose is a lightweight Windows utility that keeps your laptop running even when the lid or screen is closed. It monitors active AI agent processes in the background and disables lid-close sleep behavior when one is detected, then restores it back to normal once the agent stops. Designed for users who run AI agents like Claude Desktop, Cursor, Ollama, and more, Safeclose ensures your tasks keep running without interruption, no manual configuration needed
+<p align="center">
+  <img src="https://github.com/devinammar/Safeclose/blob/0a286c10e06eac3c42db1d17c9f1040297f625e2/Safeclose.jpg?raw=true" alt="Problems" width="600">
+</p>
 
 <div align="center">
 
@@ -12,6 +12,8 @@ SAFEclose is a lightweight Windows utility that keeps your laptop running even w
 ![Issues](https://img.shields.io/github/issues/devinammar/safeclose?style=flat-square)
 
 </div>
+
+SAFEclose is a lightweight Windows utility that keeps your laptop running even when the lid or screen is closed. It monitors active AI agent processes in the background and disables lid-close sleep behavior when one is detected, then restores it back to normal once the agent stops. Designed for users who run AI agents like Claude Desktop, Cursor, Ollama, and more, Safeclose ensures your tasks keep running without interruption, no manual configuration needed
 
 ## 🎯 Problems
 <p align="center">
@@ -30,7 +32,7 @@ As AI agents become a common part of everyday workflows, many people now carry t
 - Gemini CLI
 - And many more
 
-## 📖 How to use
+## 📖 How to Use
 
 1. Download or clone this repository
 2. Make sure all files (activate.bat, deactivate.bat & monitor.ps1) are in the same folder
@@ -47,6 +49,7 @@ Safeclose
 ├── activate.bat
 ├── deactivate.bat
 ├── monitor.ps1
+├── Banner.png
 ├── Safeclose.jpg
 ├── LISENCE
 └── README.md
