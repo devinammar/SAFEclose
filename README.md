@@ -23,7 +23,7 @@ This platform provides 2 features that users can utilize. Below is an explanatio
 
 ## 🏗️ File Structure
 ```
-Rap-Scannr
+Safeclose
 │
 ├── activate.bat
 ├── deactivate.bat
