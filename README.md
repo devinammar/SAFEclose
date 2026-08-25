@@ -37,9 +37,9 @@ As AI agents become a common part of everyday workflows, many people now carry t
 1. Download or clone this repository
 2. Make sure all files (activate.bat, deactivate.bat & monitor.ps1) are in the same folder
 3. Right-click on activate.bat → Run as administrator
-4. That's it. Safeclose runs automatically in the background on every startup
+4. That's it. SAFEclose runs automatically in the background on every startup
 
-### To stop Safeclose:
+### To stop SAFEclose:
 Right-click deactivate.bat → Run as administrator
 
 ## 🏗️ File Structure
