@@ -54,8 +54,8 @@ Safeclose
 
 | File | Description |
 | --- | --- |
-| `activate.bat` | Activates Safeclose and sets it to run on startup |
-| `deactivate.bat` | Deactivates Safeclose and restores default settings |
+| `activate.bat` | Activates SAFEclose and sets it to run on startup |
+| `deactivate.bat` | Deactivates SAFEclose and restores default settings |
 | `monitor.ps1` | Core logic, for monitors processes and controls lid behavior |
 
 ## 📝 Notes
