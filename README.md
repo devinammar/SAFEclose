@@ -51,7 +51,7 @@ SAFEclose
 ├── monitor.ps1
 ├── Banner.png
 ├── Safeclose.jpg
-├── LISENCE
+├── LICENSE
 └── README.md
 ```
 
@@ -61,7 +61,7 @@ SAFEclose
 | `deactivate.bat` | Deactivates SAFEclose and restores default settings |
 | `monitor.ps1` | Core logic, for monitors processes and controls lid behavior |
 
-## 📝 Notes
+## 📝 License
 
 <i>MIT License
 
