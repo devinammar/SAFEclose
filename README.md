@@ -2,6 +2,13 @@
 
 Safeclose is a lightweight Windows utility that keeps your laptop running even when the lid or screen is closed. It monitors active AI agent processes in the background and disables lid-close sleep behavior when one is detected, then restores it back to normal once the agent stops. Designed for users who run AI agents like Claude Desktop, Cursor, Ollama, and more, Safeclose ensures your tasks keep running without interruption, no manual configuration needed
 
+![License](https://img.shields.io/github/license/USERNAME/safeclose)
+![Platform](https://img.shields.io/badge/platform-Windows-blue)
+![PowerShell](https://img.shields.io/badge/made%20with-PowerShell-5391FE)
+![Last Commit](https://img.shields.io/github/last-commit/USERNAME/safeclose)
+![Stars](https://img.shields.io/github/stars/USERNAME/safeclose)
+![Issues](https://img.shields.io/github/issues/USERNAME/safeclose)
+
 ## 🎯 Problems
 <p align="center">
   <img src="https://github.com/devinammar/Safeclose/blob/0a286c10e06eac3c42db1d17c9f1040297f625e2/Safeclose.jpg?raw=true" alt="Problems" width="600">
