@@ -39,8 +39,18 @@ As AI agents become a common part of everyday workflows, many people now carry t
 3. Right-click on activate.bat → Run as administrator
 4. That's it. SAFEclose runs automatically in the background on every startup
 
-### To stop SAFEclose:
+To stop SAFEclose:
 Right-click deactivate.bat → Run as administrator
+
+### How to check whether SAFEclose is active or not
+```
+Task Manager → Details tab → search powershell.exe
+```
+or you can type this in PowerShell:
+```
+Get-Process powershell
+schtasks /query /tn "Safeclose"
+```
 
 ## 🏗️ File Structure
 ```
