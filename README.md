@@ -24,6 +24,7 @@ Safeclose
 ├── activate.bat
 ├── deactivate.bat
 ├── monitor.ps1
+├── LISENCE
 └── README.md
 ```
 
