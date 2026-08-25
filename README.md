@@ -19,8 +19,13 @@ Safeclose is a lightweight Windows utility that keeps your laptop running even w
 
 ## 📖 How to use
 
-### 
+1. Download or clone this repository
+2. Make sure all files (activate.bat, deactivate.bat & monitor.ps1) are in the same folder
+3. Right-click on activate.bat → Run as administrator
+4. That's it. Safeclose runs automatically in the background on every startup
+
 ### To stop Safeclose:
+Right-click deactivate.bat → Run as administrator
 
 ## 🏗️ File Structure
 ```
