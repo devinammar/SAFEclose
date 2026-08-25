@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/devinammar/SAFEclose/blob/41e77d1c5574679cea6375345985b9aabf9655ff/Banner.png?raw=true" alt="Problems" width="400">
+  <img src="https://github.com/devinammar/SAFEclose/blob/41e77d1c5574679cea6375345985b9aabf9655ff/Banner.png?raw=true" alt="Problems" width="600">
 </p>
 
 <div align="center">
