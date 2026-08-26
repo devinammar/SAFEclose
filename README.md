@@ -48,10 +48,10 @@ Task Manager → Details tab → search powershell.exe
 ```
 or you can type this in PowerShell:
 ```
-# Cek task scheduler
+# Check task scheduler
 schtasks /query /tn "SAFEclose"
 
-# Cek process (sama aja, nggak berubah)
+# Check the process
 Get-Process powershell
 ```
 or you can Right-click on status.bat → Run as administrator
