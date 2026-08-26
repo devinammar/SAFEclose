@@ -56,6 +56,29 @@ Get-Process powershell
 ```
 or you can Right-click on status.bat → Run as administrator
 
+### How to add an AI agent so it is detected by the SAFEclose system
+
+SAFEclose detects AI agents based on the list in `agents.txt`. You can add any app you want without touching the code.
+
+1. Open `agents.txt` with any text editor (Notepad is fine)
+2. Find the process name of your app, open **Task Manager → Details tab**, look for the `.exe` name of your app, then remove the `.exe` part
+3. Add a new line at the bottom using the correct prefix:
+
+| Prefix | When to use | Example |
+| --- | --- | --- |
+| `EXACT:` | The process name is unique to that AI app only | `EXACT: aider` |
+| `BROAD:` | The process name is shared with other non-AI apps | `BROAD: python` |
+
+4. Save the file — no restart needed, SAFEclose picks up changes automatically
+
+**Example:**
+```
+EXACT: aider
+EXACT: github-copilot
+```
+
+**Note:** `node` and `python` are listed as `BROAD` because they're used by many apps, not just AI agents. SAFEclose verifies the file path before counting them, so running a regular dev server or Python script will **not** trigger SAFEclose.
+
 ## 🏗️ File Structure
 ```
 SAFEclose
@@ -75,7 +98,9 @@ SAFEclose
 | --- | --- |
 | `activate.bat` | Activates SAFEclose and sets it to run on startup |
 | `deactivate.bat` | Deactivates SAFEclose and restores default settings |
-| `monitor.ps1` | Core logic, for monitors processes and controls lid behavior |
+| `monitor.ps1` | Core logic, monitors processes and controls lid behavior |
+| `status.bat` | Shows whether SAFEclose is active and which AI agents are currently running |
+| `agents.txt` | List of AI agents to detect — edit this to add your own |
 
 ## 📝 License
 
