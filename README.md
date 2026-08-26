@@ -48,8 +48,11 @@ Task Manager → Details tab → search powershell.exe
 ```
 or you can type this in PowerShell:
 ```
+# Cek task scheduler
+schtasks /query /tn "SAFEclose"
+
+# Cek process (sama aja, nggak berubah)
 Get-Process powershell
-schtasks /query /tn "Safeclose"
 ```
 
 ## 🏗️ File Structure
