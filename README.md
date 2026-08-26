@@ -58,7 +58,7 @@ or you can Right-click on status.bat → Run as administrator
 
 ### How to add an AI agent so it is detected by the SAFEclose system
 
-SAFEclose detects AI agents based on the list in `agents.txt`. You can add any app you want without touching the code.
+SAFEclose detects AI agents based on the list in `agents.txt`. You can add any app you want without touching the code
 
 1. Open `agents.txt` with any text editor (Notepad is fine)
 2. Find the process name of your app, open **Task Manager → Details tab**, look for the `.exe` name of your app, then remove the `.exe` part
