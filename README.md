@@ -61,7 +61,7 @@ or you can Right-click on status.bat → Run as administrator
 SAFEclose detects AI agents based on the list in `agents.txt`. You can add any app you want without touching the code
 
 1. Open `agents.txt` with any text editor (Notepad is fine)
-2. Find the process name of your app, open **Task Manager → Details tab**, then look for your app and copy the name without `.exe`
+2. Find the process name of your app (open **Task Manager → Details tab**), then look for your app and copy the name without `.exe`
 3. Add a new line at the bottom using the correct prefix:
 
 | Prefix | When to use | Example |
