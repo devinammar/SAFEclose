@@ -62,6 +62,8 @@ SAFEclose
 │
 ├── activate.bat
 ├── deactivate.bat
+├── status.bat
+├── agents.txt
 ├── monitor.ps1
 ├── Banner.png
 ├── Safeclose.jpg
