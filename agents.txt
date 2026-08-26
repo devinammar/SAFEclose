@@ -1,0 +1,38 @@
+# ============================================================
+#   SAFEclose - agents.txt
+#   Configure which AI agents SAFEclose should detect.
+# ============================================================
+#
+# HOW TO ADD A NEW AI AGENT:
+#   1. Open Task Manager → find the app → check the Name column (without .exe)
+#   2. Add a new line below using the correct prefix:
+#
+#   EXACT: name   → use when the process name is unique to that AI app only
+#                   e.g. "claude.exe" is always Claude Desktop, nothing else
+#
+#   BROAD: name   → use when the process name is shared with non-AI apps
+#                   e.g. "node.exe" is used by many apps, not just AI agents
+#                   SAFEclose will verify the file path to avoid false positives
+#
+# EXAMPLE - adding Aider and GitHub Copilot:
+#   EXACT: aider
+#   EXACT: github-copilot
+#
+# NOTE ON BROAD (node, python):
+#   Running "python script.py" or "npm run dev" for regular coding will NOT
+#   trigger SAFEclose — it only detects node/python processes whose file path
+#   contains an AI-related keyword (claude, cursor, ollama, etc.)
+#
+# ============================================================
+
+# --- Exact matches (unambiguous process names) ---
+EXACT: claude
+EXACT: cursor
+EXACT: ollama
+EXACT: windsurf
+EXACT: gemini
+EXACT: n8n
+
+# --- Broad matches (path-verified to avoid false positives) ---
+BROAD: node
+BROAD: python

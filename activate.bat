@@ -1,6 +1,6 @@
 @echo off
 echo ================================
-echo   Safeclose - Activating...
+echo   SAFEclose - Activating...
 echo ================================
 
 :: Check admin privileges
@@ -12,22 +12,31 @@ if %errorLevel% neq 0 (
     exit /b 1
 )
 
+:: Check if SAFEclose is already running
+schtasks /query /tn "SAFEclose" >nul 2>&1
+if %errorLevel% equ 0 (
+    echo [WARNING] SAFEclose is already active!
+    echo [WARNING] Run deactivate.bat first if you want to restart it.
+    pause
+    exit /b 0
+)
+
 :: Get current directory
 set SCRIPT_DIR=%~dp0
 set PS_SCRIPT=%SCRIPT_DIR%monitor.ps1
 
 :: Create Task Scheduler task
-schtasks /create /tn "Safeclose" /tr "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"%PS_SCRIPT%\"" /sc onlogon /ru "%USERNAME%" /f
+schtasks /create /tn "SAFEclose" /tr "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File \"%PS_SCRIPT%\"" /sc onlogon /ru "%USERNAME%" /f
 
 if %errorLevel% equ 0 (
     echo.
-    echo [OK] Safeclose activated successfully!
+    echo [OK] SAFEclose activated successfully!
     echo [OK] It will now run automatically on every startup.
     echo.
-    echo Starting Safeclose now...
+    echo Starting SAFEclose now...
     powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File "%PS_SCRIPT%"
 ) else (
-    echo [ERROR] Failed to activate Safeclose.
+    echo [ERROR] Failed to activate SAFEclose.
 )
 
 pause

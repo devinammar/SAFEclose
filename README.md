@@ -40,7 +40,7 @@ As AI agents become a common part of everyday workflows, many people now carry t
 4. That's it. SAFEclose runs automatically in the background on every startup
 
 To stop SAFEclose:
-Right-click deactivate.bat → Run as administrator
+Right-click on deactivate.bat → Run as administrator
 
 ### How to check whether SAFEclose is active or not
 ```
@@ -54,6 +54,7 @@ schtasks /query /tn "SAFEclose"
 # Cek process (sama aja, nggak berubah)
 Get-Process powershell
 ```
+or you can Right-click on status.bat → Run as administrator
 
 ## 🏗️ File Structure
 ```

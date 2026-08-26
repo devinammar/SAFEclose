@@ -1,6 +1,6 @@
 @echo off
 echo ================================
-echo   Safeclose - Deactivating...
+echo   SAFEclose - Deactivating...
 echo ================================
 
 :: Check admin privileges
@@ -12,23 +12,36 @@ if %errorLevel% neq 0 (
     exit /b 1
 )
 
-:: Stop running monitor process
-taskkill /f /im powershell.exe /fi "WINDOWTITLE eq Safeclose*" >nul 2>&1
+:: Kill monitor process using saved PID
+set PID_FILE=%TEMP%\safeclose.pid
+if exist "%PID_FILE%" (
+    set /p SAVED_PID=<"%PID_FILE%"
+    echo Stopping SAFEclose process (PID: %SAVED_PID%)...
+    taskkill /f /pid %SAVED_PID% >nul 2>&1
+    del "%PID_FILE%" >nul 2>&1
+    echo [OK] Process stopped.
+) else (
+    echo [WARNING] PID file not found. Attempting fallback kill...
+    taskkill /f /im powershell.exe /fi "WINDOWTITLE eq SAFEclose*" >nul 2>&1
+)
 
 :: Delete Task Scheduler task
-schtasks /delete /tn "Safeclose" /f
+schtasks /delete /tn "SAFEclose" /f >nul 2>&1
+if %errorLevel% equ 0 (
+    echo [OK] Startup task removed.
+) else (
+    echo [WARNING] Task not found or already removed.
+)
 
-:: Restore lid-close to sleep
+:: Safety fallback: restore lid to sleep
 powercfg /setdcvalueindex SCHEME_CURRENT SUB_BUTTONS LIDACTION 1
 powercfg /setacvalueindex SCHEME_CURRENT SUB_BUTTONS LIDACTION 1
 powercfg /S SCHEME_CURRENT
 
-if %errorLevel% equ 0 (
-    echo.
-    echo [OK] Safeclose deactivated successfully!
-    echo [OK] Lid-close behavior restored to default.
-) else (
-    echo [ERROR] Something went wrong.
-)
+echo.
+echo [OK] SAFEclose deactivated successfully!
+echo [OK] Lid-close behavior restored.
+echo.
+echo Log file: %TEMP%\safeclose.log
 
 pause
